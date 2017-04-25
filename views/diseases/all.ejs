@@ -1,0 +1,13 @@
+<div class-"text-center">
+<h1>Disease List</h1>
+<h2>Pretty sure you have all of these </h2>
+<% diseases.forEach(function(d) { %>
+	<a href="/disease/<% d.id %>">
+	<p class="text-danger">
+	<%= d.name %>
+	</p>
+	</a>
+	<% }); %>
+</div>
+
+
