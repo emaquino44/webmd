@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
 router.post("/", function(req, res) {
     console.log(req.body);
     db.disease.create({
-        name: (req.body),
+        name: req.body.name,
         description: req.body.description,
         severity: req.body.serverity,
         transmission: req.body.transmission
@@ -33,7 +33,7 @@ router.post("/", function(req, res) {
                 res.redirect("/diseases");
             });
         } else {
-            res.direct("/diseases");
+            res.redirect("/diseases");
         }
     }).catch(function(error) {
         res.send(error);
@@ -52,6 +52,7 @@ router.get("/:id", function(req, res) {
         res.render("diseases/show", { disease: disease });
     });
 });
+
 
 
 module.exports = router;

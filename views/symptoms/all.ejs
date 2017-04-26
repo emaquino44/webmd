@@ -1,5 +1,6 @@
 <div class="text-center">
 <h1>Which of these do you have?</h1>
+<% if (symptoms) { %>
 <% symptoms.forEach(function(s){ %>
 <div>
 <a href="/symptoms/<%= s.id %>">
@@ -7,4 +8,6 @@
 </a>
 </div>
 <% }); %>
+</div>
+<% } %>
 </div>

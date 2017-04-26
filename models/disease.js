@@ -1,7 +1,7 @@
 'use strict';
 module.exports = function(sequelize, DataTypes) {
     var disease = sequelize.define('disease', {
-        name: DataTypes.TEXT,
+        name: DataTypes.STRING,
         description: DataTypes.TEXT,
         terminal: DataTypes.BOOLEAN,
         severity: DataTypes.INTEGER,
@@ -10,7 +10,7 @@ module.exports = function(sequelize, DataTypes) {
         classMethods: {
             associate: function(models) {
                 // associations can be defined here
-                models.disease.belongsToMany(models.symptoms, { through: models.disease_symptom });
+                models.disease.belongsToMany(models.symptom, { through: models.disease_symptom });
             }
         }
     });

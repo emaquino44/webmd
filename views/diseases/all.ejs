@@ -1,8 +1,10 @@
 <div class-"text-center">
 <h1>Disease List</h1>
+<img src="http://orig08.deviantart.net/4a68/f/2011/194/7/7/mad_doctor_by_dizoider-d3nsl64.jpg" class="img-thumbnail">
+<br>
 <h2>Pretty sure you have all of these </h2>
 <% diseases.forEach(function(d) { %>
-	<a href="/disease/<% d.id %>">
+	<a href="/diseases/<% d.id %>">
 	<p class="text-danger">
 	<%= d.name %>
 	</p>
